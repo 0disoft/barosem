@@ -1,0 +1,19 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  // 생성된 Prisma 클라이언트를 SvelteKit의 서버 전용 폴더($lib/server) 내부에 위치시키면
+  // 클라이언트(브라우저) 코드에 실수로 포함되는 것을 방지하여 보안과 번들 크기 최적화에 도움이 됩니다.
+  output   = "../src/lib/server/prisma" // 생성될 Prisma Client의 경로 지정
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
