@@ -1,7 +1,4 @@
-feat: Implement initial project setup and base layout
+fix: Resolve theme toggle functionality
 
-- Install Zod for type safety.
-- Configure ESLint and Prettier for code quality, including SvelteKit and TypeScript support.
-- Create `.env.example` for environment variable management.
-- Establish JSDoc guidelines for API endpoint documentation.
-- Design the base `+layout.svelte` with a simple theme toggle and central alignment.
+- Corrected the theme toggle logic in `+layout.svelte` to properly interact with the `.dark` class defined in `app.css`.
+- Changed `data-theme` attribute manipulation to `document.documentElement.classList.toggle('dark')` for effective theme switching.
