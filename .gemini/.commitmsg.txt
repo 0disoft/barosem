@@ -1,4 +1,4 @@
-fix: Resolve theme toggle functionality
+fix: Resolve theme toggle icon visibility in dark mode
 
-- Corrected the theme toggle logic in `+layout.svelte` to properly interact with the `.dark` class defined in `app.css`.
-- Changed `data-theme` attribute manipulation to `document.documentElement.classList.toggle('dark')` for effective theme switching.
+- Corrected `class:` directive usage in Svelte components by dynamically constructing class strings.
+- Ensured proper icon visibility and smooth transitions in both light and dark themes using opacity and rotation.
