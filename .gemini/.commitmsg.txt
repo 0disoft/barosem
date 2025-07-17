@@ -1,0 +1,7 @@
+feat: Implement initial project setup and base layout
+
+- Install Zod for type safety.
+- Configure ESLint and Prettier for code quality, including SvelteKit and TypeScript support.
+- Create `.env.example` for environment variable management.
+- Establish JSDoc guidelines for API endpoint documentation.
+- Design the base `+layout.svelte` with a simple theme toggle and central alignment.

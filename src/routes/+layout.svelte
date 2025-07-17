@@ -1,7 +1,20 @@
 <script lang="ts">
 	import '../app.css';
+	import { Button } from '../lib/components/ui/button';
 
 	let { children } = $props();
+
+	function toggleTheme() {
+		const currentTheme = document.documentElement.getAttribute('data-theme');
+		if (currentTheme === 'dark') {
+			document.documentElement.setAttribute('data-theme', 'light');
+		} else {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+	}
 </script>
 
-{@render children()}
+<div class="min-h-screen flex flex-col items-center justify-center">
+	{@render children()}
+	<Button onclick={toggleTheme} class="mt-4">Toggle Theme</Button>
+</div>
